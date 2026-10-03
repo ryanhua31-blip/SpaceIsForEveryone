@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Is For Everyone</title>
+  <meta name="description" content="A playful mission hub that helps students discover how school subjects connect to space exploration." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Space Is For Everyone home">
+        <span class="brand-mark"><span></span></span>
+        <span>SPACE IS FOR <em>EVERYONE</em></span>
+      </a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home">Mission home</a>
+        <a class="nav-link" href="#subjects">Explore subjects</a>
+        <a class="nav-link" href="#teachers">Teacher toolkit</a>
+      </nav>
+      <button class="top-cta" data-scroll="#subjects">Start exploring <span>↗</span></button>
+    </header>
+
+    <main id="app">
+      <section class="page home-page active-page" id="home" data-page="home">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> A classroom mission by SpaceX</p>
+            <h1>Look up.<br /><span>Learn more.</span></h1>
+            <p class="hero-lede">The universe is your classroom. Discover how the subjects you’re learning today help us explore tomorrow.</p>
+            <div class="hero-actions">
+              <button class="primary-button" data-scroll="#subjects">Choose a subject <span>→</span></button>
+              <a class="text-link" href="#teachers">For teachers <span>↗</span></a>
+            </div>
+            <div class="mission-burst"><span>★</span><div><strong>Your curiosity is the fuel.</strong><small>Every question can start a mission.</small></div></div>
+            <div class="mission-stats">
+              <div><strong>05</strong><span>Subjects to explore</span></div>
+              <div><strong>∞</strong><span>Questions to ask</span></div>
+              <div><strong>01</strong><span>Big universe</span></div>
+            </div>
+          </div>
+          <div class="hero-art" aria-label="Illustration of a rocket orbiting Earth">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="planet planet-earth"><span class="continent c-one"></span><span class="continent c-two"></span><span class="continent c-three"></span><i></i></div>
+            <div class="mini-moon"></div>
+            <div class="rocket"><div class="rocket-window"></div><div class="rocket-fin left"></div><div class="rocket-fin right"></div><div class="rocket-fire"><i></i><i></i><i></i></div></div>
+            <span class="star star-a">✦</span><span class="star star-b">✦</span><span class="star star-c">·</span><span class="star star-d">✦</span>
+            <div class="art-label"><span>LIVE MISSION</span><strong>Curiosity is on board</strong><small>Next stop: anywhere.</small></div>
+          </div>
+        </div>
+        <div class="ticker"><div class="ticker-label">TODAY’S TRANSMISSION</div><p>There is no “space person.” There are mathematicians, writers, artists, scientists—and you.</p><span>◉ 01 / 05</span></div>
+      </section>
+
+      <section class="page subjects-page" id="subjects" data-page="subjects">
+        <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-dot"></span> Choose your launchpad</p><h2>Every subject<br /><em>goes to space.</em></h2></div><p class="section-intro">Pick a subject and see the hidden superpower it gives every space explorer.</p></div>
+        <section class="mission-map" id="subject-map" aria-labelledby="map-title">
+          <div class="map-heading"><div><p class="eyebrow"><span class="eyebrow-dot"></span> Your subject solar system</p><h3 id="map-title">Visit every world.<br /><em>Unlock your certificate.</em></h3></div><div class="map-progress"><div class="progress-top"><span>MISSION PROGRESS</span><strong><span id="visited-count">0</span> / 5 WORLDS</strong></div><div class="progress-track"><span id="progress-fill"></span></div><p id="mission-status">Your first planet is waiting.</p></div></div>
+          <div class="solar-system" aria-label="Solar system map of school subjects">
+            <div class="solar-sun"><span>YOU</span><strong>Explorer</strong></div>
+            <div class="system-orbit orbit-a"></div><div class="system-orbit orbit-b"></div><div class="system-orbit orbit-c"></div><div class="system-orbit orbit-d"></div>
+            <button class="map-planet map-math" data-subject="math"><span class="map-planet-body"></span><span class="map-planet-name">Math</span><small>Plot a path</small><b class="map-planet-check">✓</b></button>
+            <button class="map-planet map-science" data-subject="science"><span class="map-planet-body"></span><span class="map-planet-name">Science</span><small>Read the clues</small><b class="map-planet-check">✓</b></button>
+            <button class="map-planet map-language" data-subject="language"><span class="map-planet-body"></span><span class="map-planet-name">Language arts</span><small>Share the mission</small><b class="map-planet-check">✓</b></button>
+            <button class="map-planet map-art" data-subject="art"><span class="map-planet-body"></span><span class="map-planet-name">Art + design</span><small>Imagine next</small><b class="map-planet-check">✓</b></button>
+            <button class="map-planet map-engineering" data-subject="engineering"><span class="map-planet-body"></span><span class="map-planet-name">Engineering</span><small>Make it real</small><b class="map-planet-check">✓</b></button>
+          </div>
+          <div class="map-footer"><p id="remaining-subjects">Five subject worlds are ready for launch.</p><button class="certificate-button" id="certificate-button" disabled>Certificate locked <span>▣</span></button><button class="reset-progress" id="reset-progress">Reset mission</button></div>
+        </section>
+        <div class="subject-grid">
+          <button class="subject-card coral" data-subject="math"><span class="card-number">01</span><span class="card-icon">∿</span><span class="card-title">Math</span><span class="card-desc">Plot a path to orbit</span><span class="card-arrow">↗</span><span class="card-status">Not visited</span></button>
+          <button class="subject-card blue" data-subject="science"><span class="card-number">02</span><span class="card-icon">◌</span><span class="card-title">Science</span><span class="card-desc">Become a planet detective</span><span class="card-arrow">↗</span><span class="card-status">Not visited</span></button>
+          <button class="subject-card mustard" data-subject="language"><span class="card-number">03</span><span class="card-icon">Aa</span><span class="card-title">Language arts</span><span class="card-desc">Write mission control</span><span class="card-arrow">↗</span><span class="card-status">Not visited</span></button>
+          <button class="subject-card mint" data-subject="art"><span class="card-number">04</span><span class="card-icon">✧</span><span class="card-title">Art + design</span><span class="card-desc">Imagine the impossible</span><span class="card-arrow">↗</span><span class="card-status">Not visited</span></button>
+          <button class="subject-card violet wide-card" data-subject="engineering"><span class="card-number">05</span><span class="card-icon">⌁</span><span class="card-title">Engineering</span><span class="card-desc">Build a better way there</span><span class="card-arrow">↗</span><span class="card-decoration">+ &nbsp; — &nbsp; ×</span><span class="card-status">Not visited</span></button>
+        </div>
+        <div class="curiosity-strip"><span class="strip-mark">?</span><div><strong>Can’t choose?</strong><span>Ask a friend to pick your mission.</span></div><button data-subject="science">Surprise me <span>✦</span></button></div>
+      </section>
+
+      <section class="page detail-page" id="detail" data-page="detail">
+        <button class="back-link" data-scroll="#subjects">← All subjects</button>
+        <div class="detail-layout"><div class="detail-copy"><p class="eyebrow" id="detail-eyebrow"><span class="eyebrow-dot"></span> Mission 01 / Math</p><h2 id="detail-title">Math helps us<br /><em>find the way.</em></h2><p id="detail-description">Before a rocket can leave Earth, someone has to calculate the perfect path. Angles, distance, speed, and time all work together to find an orbit.</p><div class="learn-box"><span>IN THIS MISSION</span><strong id="detail-learn">Use a launch angle to reach orbit.</strong></div></div><div class="activity-panel" id="activity-panel"></div></div>
+        <div class="mission-complete-row"><div><span class="completion-kicker">NEXT STEP</span><strong id="completion-message">Finish the activity to mark this planet visited.</strong></div><button class="primary-button" id="complete-mission">Finish mission &amp; choose another planet <span>→</span></button></div>
+      </section>
+
+      <section class="page teachers-page" id="teachers" data-page="teachers">
+        <div class="teacher-hero"><div><p class="eyebrow"><span class="eyebrow-dot"></span> Mission control for grown-ups</p><h2>Bring curiosity<br /><em>into the room.</em></h2></div><p>Space makes every lesson feel bigger. Use these quick prompts to connect classroom learning with real missions and the people who make them happen.</p></div>
+        <div class="teacher-content"><div class="prompt-card"><span class="big-quote">“</span><h3>Try this tomorrow</h3><p>Ask your students: “If you could send one thing into space to help people on Earth, what would it be—and how would it work?”</p><button class="outline-button" id="new-prompt">Another prompt <span>↻</span></button></div><div class="toolkit-list"><div class="tool-row"><span>01</span><div><strong>Start with a question</strong><p>Let wonder lead before you introduce the answer.</p></div><b>+</b></div><div class="tool-row"><span>02</span><div><strong>Make it cross-curricular</strong><p>Pair a science idea with a story, sketch, or equation.</p></div><b>+</b></div><div class="tool-row"><span>03</span><div><strong>Celebrate every attempt</strong><p>Exploration is built from testing, learning, and trying again.</p></div><b>+</b></div></div></div>
+      </section>
+    </main>
+    <div class="certificate-modal" id="certificate-modal" hidden role="dialog" aria-modal="true" aria-labelledby="certificate-title">
+      <div class="certificate-backdrop" data-close-certificate></div>
+      <div class="certificate-card"><button class="certificate-close" data-close-certificate aria-label="Close certificate">×</button><p class="eyebrow"><span class="eyebrow-dot"></span> Mission complete</p><div class="certificate-seal">✦</div><h2 id="certificate-title">Certificate of<br /><em>Curiosity</em></h2><p class="certificate-copy">This certificate celebrates an explorer who visited every subject world and discovered that big missions need every kind of mind.</p><label for="explorer-name">EXPLORER NAME</label><input id="explorer-name" type="text" maxlength="32" placeholder="Type your name" autocomplete="off" /><strong class="certificate-name" id="certificate-name">Space Explorer</strong><div class="certificate-stamp">ALL 05 SUBJECT WORLDS VISITED <span>✓</span></div><div class="certificate-actions"><button class="primary-button" id="print-certificate">Print certificate <span>↗</span></button><button class="text-link" data-close-certificate>Back to map</button></div></div>
+    </div>
+    <footer><span>© SPACE IS FOR EVERYONE</span><span>Built for curious minds, everywhere.</span><span>↗ Keep looking up</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
