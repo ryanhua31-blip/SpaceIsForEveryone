@@ -4,3 +4,5 @@
 *.html linguist-detectable
 *.css linguist-detectable
 *.js linguist-detectable
+*.css linguist-generated=false
+*.js linguist-generated=false
